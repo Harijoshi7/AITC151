@@ -1,2 +1,2 @@
-# AITC151
+# AITC251
 Homework Assignmments
