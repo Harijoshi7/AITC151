@@ -1,83 +1,59 @@
 import java.util.Scanner;
-public class Main
-{
+public class Main {
     public static void main(String[] args)
-
     {
-        /* Question number 1: Write an application that displays a box, an oval, an arrow and a diamond using asterisk (*)
-        as follows*/
-        System.out.println("************");
-        System.out.println("*          *");
-        System.out.println("*          *");
-        System.out.println("*          *");
-        System.out.println("*          *");
-        System.out.println("*          *");
-        System.out.println("*          *");
-        System.out.println("*          *");
-        System.out.println("************");
-        System.out.println("------------------------------");
-        System.out.println("     ***     ");
-        System.out.println("  *       *");
-        System.out.println(" *         *");
-        System.out.println("*           *");
-        System.out.println("*           *");
-        System.out.println("*           *");
-        System.out.println(" *         *");
-        System.out.println("  *       *");
-        System.out.println("     ***     ");
-        System.out.println("------------------------------");
-        System.out.println("  *");
-        System.out.println(" *** ");
-        System.out.println("*****");
-        System.out.println("  *");
-        System.out.println("  *");
-        System.out.println("  *");
-        System.out.println("  *");
-        System.out.println("  *");
-        System.out.println("  *");
-        System.out.println("------------------------------");
-        System.out.println("    *");
-        System.out.println("   * *");
-        System.out.println("  *   *");
-        System.out.println(" *     *");
-        System.out.println("*       *");
-        System.out.println(" *     *");
-        System.out.println("  *   *");
-        System.out.println("   * *");
-        System.out.println("    *");
-        System.out.println("------------------------------");
-// Question no 2:
-        // Write Java statements that accomplish each of the following tasks:
-        //   a. Display the message “Enter an Integer:”
-            System.out.println("Enter an Integer");
-        //    b. Assign the product of variables b and c to variable a.
-            int b = 20;
-            int c = 30;
-            int a;
-            a = b*c;
-        //    c. Use a comment to state that a program performs a sample payroll calculation.
-        // This program performs a sample payroll calculation.
-        System.out.println("------------------------------");
-// Question no: 3
-        /*Write an application that asks the user to enter two integers, obtains them from the user
-            and prints their sum, product, difference, quotient (division).*/
-        // using Scanner class to enter the numbers
-        Scanner userInput= new Scanner(System.in);
-        System.out.println(" Enter two integers: ");
-        int num1= userInput.nextInt();
-        int num2= userInput.nextInt();
-        int sum;
-        int dif;
-        int product;
-        double div;
-        sum= num1 + num2;
-        dif= num1-num2;
-        product=num1*num2;
-        div = (double)num1/num2;
-        // Printing the required output
-        System.out.println(" Sum of two numbers is : "+ sum);
-        System.out.println(" product of two numbers is : "+ product);
-        System.out.println(" Difference of two numbers is : "+ dif);
-        System.out.println(" Quotient of two numbers is : "+ div);
+        System.out.println(" Grade Calculator ");
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Please Enter the following information:");
+        System.out.println("Enter the percentage scored in assignments (out of 20%): ");
+        int agmtprct = userInput.nextInt();
+        System.out.println("Enter the percentage scored in final project (out of 30%): ");
+        int fprojprct = userInput.nextInt();
+        System.out.println("Enter the percentage scored in test and quizzes (out of 40%): ");
+        int tstqzprct = userInput.nextInt();
+        System.out.println("Enter the percentage scored in participation (out of 10%): ");
+        int partptprct = userInput.nextInt();
+
+        int totprct = agmtprct + fprojprct + tstqzprct + partptprct;
+
+        if (totprct >= 93 && totprct <= 100){
+            System.out.println("Grade A with " + totprct + "%");
+        }
+        else if (totprct >= 90 && totprct <= 92.99){
+            System.out.println("Grade A- with " + totprct + "%");
+        }
+        else if (totprct >= 87 && totprct <= 89.99){
+            System.out.println("Grade B+ with " + totprct + "%");
+        }
+        else if (totprct >= 83 && totprct <= 86.99){
+            System.out.println("Grade B with " + totprct + "%");
+        }
+        else if (totprct >= 80 && totprct <= 82.99){
+            System.out.println("Grade B- with " + totprct + "%");
+        }
+        else if (totprct >= 77 && totprct <= 79.99){
+            System.out.println("Grade C+ with " + totprct + "%");
+        }
+        else if (totprct >= 73 && totprct <= 76.99){
+            System.out.println("Grade C with " + totprct + "%");
+        }
+        else if (totprct >= 70 && totprct <= 72.99){
+            System.out.println("Grade C- with " + totprct + "%");
+        }
+        else if (totprct >= 67 && totprct <= 69.99){
+            System.out.println("Grade D+ with " + totprct + "%");
+        }
+        else if (totprct >= 63 && totprct <= 66.99){
+            System.out.println("Grade D with " + totprct + "%");
+        }
+        else if (totprct >= 60 && totprct <= 62.99){
+            System.out.println("Grade D- with " + totprct + "%");
+        }
+        else if (totprct >= 0 && totprct <= 59.99){
+            System.out.println("Grade F with " + totprct + "%");
+        }
+        else{
+            System.out.println("Restart the program!");
+        }
     }
 }
